@@ -1,0 +1,5 @@
+ID,Title,Description,Due Date,Status
+1,BeautifulSoup,BS4 is used for html data scrap,2025-03-20,Pending
+2,Web Scraping,python is also used for web scraping,2025-03-21,Complete
+3,Requests Library,Used HTTPS libraries for scraping and ,2025-03-25,Complete
+5,Selenium,Selenium is used for js formate data scrap,2025-03-21,Pending

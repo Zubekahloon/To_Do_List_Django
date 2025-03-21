@@ -1,0 +1,8 @@
+Python: 3.13.1
+Django: 5.1.7
+VirtualEnvironment-Name: fstt 
+Project-Name: todolist
+App-Name: todolistapp
+Model-Name: Task
+superuser-username: admin
+superuser-pass:  admin

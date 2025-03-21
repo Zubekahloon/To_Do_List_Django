@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>Add Task</title>
+    <style>
+        .main {
+            min-height: 80vh;
+            /* background-color: rgb(231, 247, 247); */
+        }
+
+        h2 {
+            margin-top: 7%;
+            text-align: center;
+        }
+        .btn{
+            display: flex;
+            float: right;
+            margin-bottom: 2px;
+        }
+    </style>
+</head>
+
+<body style="background-color: rgb(231, 247, 247);">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">To Do LIST</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://127.0.0.1:8000/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Task Manager
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/addtask">Add Task</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/displaytask">Display ALL Task</a></li>
+                            <li><a class="dropdown-item" href="http://127.0.0.1:8000/modifytask">Modify Task</a></li>
+                            <!-- <li><a class="dropdown-item" href="http://127.0.0.1:8000/displaytask">Delete</a></li> -->
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+        <h2 class="marignn">Display All Task</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Due Date</th>
+                    <th scope="col">Status</th>
+                    <th scope="col">Image</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in Taskadded %}
+                <tr>
+                    <td>{{task.id}}</td>
+                    <td>{{task.title}}</td>
+                    <td>{{task.description}}</td>
+                    <td>{{task.due_date}}</td>
+                    <td>{{task.status}}</td>
+                    <td><img src="media/{{task.image}}" alt="my-image" width="80px" height="80px"></td>
+                </tr>
+                {% endfor %}
+
+            </tbody>
+            <a href="{% url 'download_tasks' %}" class="btn btn-success">Download Tasks</a>
+        </table>
+        
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2025 My To-Do List. All rights reserved.</p>
+    </footer>
+
+</body>
+
+</html>

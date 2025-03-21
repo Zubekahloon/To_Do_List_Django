@@ -1,0 +1,37 @@
+[
+    {
+        "ID": 1,
+        "Title": "BeautifulSoup",
+        "Description": "BS4 is used for html data scrap",
+        "Due Date": "2025-03-20",
+        "Status": "Pending"
+    },
+    {
+        "ID": 2,
+        "Title": "Web Scraping",
+        "Description": "python is also used for web scraping",
+        "Due Date": "2025-03-21",
+        "Status": "Complete"
+    },
+    {
+        "ID": 3,
+        "Title": "Requests Library",
+        "Description": "Used HTTPS libraries for scraping and ",
+        "Due Date": "2025-03-25",
+        "Status": "Complete"
+    },
+    {
+        "ID": 5,
+        "Title": "Selenium",
+        "Description": "Selenium is used for js formate data scrap",
+        "Due Date": "2025-03-21",
+        "Status": "Pending"
+    },
+    {
+        "ID": 6,
+        "Title": "Django",
+        "Description": "Django Used for web app.....",
+        "Due Date": "2025-03-28",
+        "Status": "Pending"
+    }
+]
